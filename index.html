@@ -1,0 +1,126 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bulma CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+
+    <!-- font awesome cdn -->
+    <script
+      src="https://kit.fontawesome.com/8a80b728dc.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="has-background-lightgray p-4 m-3 has-background-success">
+      <h1 class="title">Query results stored below:</h1>
+    </div>
+
+    <div
+      id="query1"
+      class="has-background-lightgray p-4 m-3 has-background-grey-lighter"
+    >
+      1: Show all teams in Spain
+    </div>
+
+    <div
+      id="query2"
+      class="has-background-lightgray p-4 m-3 has-background-grey-lighter"
+    >
+      2: Show all teams in Madrid, Spain
+    </div>
+
+    <div
+      id="query3"
+      class="has-background-lightgray p-4 m-3 has-background-grey-lighter"
+    >
+      3: Show all national teams (Remember there might be new national teams
+      added later)
+    </div>
+
+    <div
+      id="query4"
+      class="has-background-lightgray p-4 m-3 has-background-grey-lighter"
+    >
+      4: Show all teams that are not in Spain
+    </div>
+
+    <div
+      id="query5"
+      class="has-background-lightgray p-4 m-3 has-background-grey-lighter"
+    >
+      5: Show all teams that are not in Spain or England
+    </div>
+
+    <div
+      id="query6"
+      class="has-background-lightgray p-4 m-3 has-background-grey-lighter"
+    >
+      6: Show all teams in Spain with more than 700M fans
+    </div>
+
+    <div
+      id="query7"
+      class="has-background-lightgray p-4 m-3 has-background-grey-lighter"
+    >
+      7: Show all teams with a number of fans in the range of 500M and 600M
+    </div>
+
+    <div
+      id="query8"
+      class="has-background-lightgray p-4 m-3 has-background-grey-lighter"
+    >
+      8: Show all teams where Ronaldo is a top scorer
+    </div>
+
+    <div
+      id="query9"
+      class="has-background-lightgray p-4 m-3 has-background-grey-lighter"
+    >
+      9: Show all teams where Ronaldo, Maradona, or Messi is a top scorer
+    </div>
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
+    <script>
+      // TODO
+      // Copy **only** your firebaseConfig from Google Firebae and add it below
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBMfIC4Yebye1Er3nYuAFC_7ePiYc7VHrQ",
+        authDomain: "is424-test.firebaseapp.com",
+        projectId: "is424-test",
+        storageBucket: "is424-test.firebasestorage.app",
+        messagingSenderId: "74537864639",
+        appId: "1:74537864639:web:5d844216ea74e6deece50a",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      // define authentication variable
+      let auth = firebase.auth();
+      let db = firebase.firestore();
+
+      // define a storage reference
+      let ref = firebase.storage().ref();
+    </script>
+    <!-- make sure to add your own js file as the last line in index.html file -->
+    <script src="app.js"></script>
+  </body>
+</html>
